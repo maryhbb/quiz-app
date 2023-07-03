@@ -69,3 +69,35 @@ main {
   background-color: rgb(255, 255, 255, 0.5);
   box-shadow: 0 4px 4px rgb(0, 0, 0, 0.3);
 }
+
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
+    border-top: 2px solid #000;
+    align-items: center;
+  }
+  
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .navigation a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .navigation a:hover {
+    background-color: rgb(255, 255, 255, 0.5);
+    box-shadow: 0 4px 4px rgb(0, 0, 0, 0.3);
+  }
+  
