@@ -31,22 +31,41 @@ main {
 }
 
 .card {
-  padding: 20px;
+  padding: 10px;
   margin: 20px;
   background-color: rgb(255, 255, 255, 0.3);
   border-radius: 15px;
   text-align: center;
+  width: 70%;
 }
 
 .card-tag {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  padding: 0;
 }
 .tag {
+  margin: 5px;
   padding: 5px;
   list-style: none;
   background-color: rgb(255, 255, 255, 0.6);
   border-radius: 5px;
-  margin: 5px;
+}
+
+.answer-button {
+  margin: 15px;
+  padding: 5px;
+  width: 120px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.3);
+  border-color: rgb(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.answer-button:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.3);
 }
