@@ -46,7 +46,6 @@ main {
 .card-tag {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   padding: 0;
 }
 .tag {
