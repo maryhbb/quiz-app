@@ -9,22 +9,26 @@ body {
   background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
 }
 
-.header {
+header {
+  height: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-shadow: 5px 5px 2px rgb(0, 0, 0, 0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  border-bottom: 2px solid #000;
+  z-index: 100;
   background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
+  text-shadow: 5px 5px 2px rgb(0, 0, 0, 0.3);
 }
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto auto;
@@ -49,7 +53,7 @@ main {
   margin: 5px;
   padding: 5px;
   list-style: none;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: rgb(255, 255, 255, 0.25);
   border-radius: 5px;
 }
 
@@ -70,34 +74,32 @@ main {
   box-shadow: 0 4px 4px rgb(0, 0, 0, 0.3);
 }
 
-
 footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
-    border-top: 2px solid #000;
-    align-items: center;
-  }
-  
-  .navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .navigation a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-  }
-  
-  .navigation a:hover {
-    background-color: rgb(255, 255, 255, 0.5);
-    box-shadow: 0 4px 4px rgb(0, 0, 0, 0.3);
-  }
-  
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
+  border-top: 2px solid #000;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.navigation a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+.navigation a:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.3);
+}
