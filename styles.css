@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 200vh;
   font-family: monospace;
   background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
 }
@@ -145,6 +145,14 @@ figure {
   align-items: center;
   gap: 10px;
 }
+
+figcaption {
+  font-weight: bold;
+}
+
+strong {
+  font-size: 18px;
+}
 .profile-picture {
   display: flex;
   border-radius: 50px;
@@ -198,5 +206,8 @@ figure {
 }
 
 .dark-mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0 2em;
 }

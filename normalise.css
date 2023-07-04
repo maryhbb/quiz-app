@@ -11,8 +11,6 @@ ul {
   margin: 0;
 }
 
-.dark-mode {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+button {
+  color: inherit;
 }
