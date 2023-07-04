@@ -1,15 +1,17 @@
+@import "./normalise.css";
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  min-height: 200vh;
+  min-height: 100vh;
   font-family: monospace;
   background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
 }
 
-header {
+header.header {
   height: 100px;
   text-transform: uppercase;
   font-weight: bold;
@@ -46,10 +48,11 @@ main {
 .card-tag {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
+  gap: 4px;
 }
+
 .tag {
-  margin: 5px;
+  margin: 0;
   padding: 5px;
   list-style: none;
   background-color: rgb(255, 255, 255, 0.25);
@@ -125,7 +128,7 @@ footer {
 }
 
 .profile-card {
-  height: 500px;
+  height: 100%;
   padding: 20px;
   margin: 20px;
   background-color: rgb(255, 255, 255, 0.3);
@@ -133,7 +136,7 @@ footer {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 1.5rem;
 }
 
 figure {
@@ -147,11 +150,53 @@ figure {
   border-radius: 50px;
 }
 
-.profile-tags {
-  margin-bottom: -40px;
-}
-
 .profile-card button {
   margin: 0;
   align-self: center;
+}
+
+.mode-toggle {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.my-questions,
+.my-bookmarks {
+  border: 2px solid;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: space-around;
+}
+
+.my-questions-count,
+.my-bookmarks-count {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 5px;
+}
+
+.dark-mode {
+  padding: 0 2em;
 }
