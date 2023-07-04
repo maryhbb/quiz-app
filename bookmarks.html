@@ -3,14 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz App</title>
+    <title>Quiz App | Bookmarks</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="header"><h1>Quiz App</h1></header>
+    <header class="header">
+      <h1>
+        Quiz App
+        <span style="font-size: 20px; display: flex; justify-content: center"
+          >Bookmarks</span
+        >
+      </h1>
+    </header>
     <main>
       <section class="card">
-        <button class="bookmark">
+        <button class="bookmark bookmark-active">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -62,10 +69,10 @@
     </main>
     <footer>
       <nav class="navigation">
-        <a href="#home">
+        <a href="index.html">
           <img src="./images/home.svg" width="40" height="40" alt="home" />
         </a>
-        <a href="bookmarks.html"
+        <a href="bookmarks"
           ><img
             src="./images/bookmark.svg"
             alt="bookmark"
