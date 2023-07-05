@@ -14,3 +14,7 @@ ul {
 button {
   color: inherit;
 }
+
+figure {
+  margin: 0;
+}
