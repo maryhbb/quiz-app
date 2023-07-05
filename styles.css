@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 @import "./normalise.css";
 
 * {
@@ -5,7 +6,7 @@
 }
 
 body {
-  font-family: monospace;
+  font-family: "Space Mono", monospace;
   max-width: 400px;
   margin: auto auto;
   background-color: #000;
@@ -16,13 +17,12 @@ header.header {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 20px;
-  letter-spacing: 2px;
   position: sticky;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #ccc;
   z-index: 100;
   background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
 }
@@ -37,7 +37,7 @@ main {
 
 .card {
   position: relative;
-  padding: 10px;
+  padding: 25px;
   margin: 20px;
   background-color: rgb(255, 255, 255, 0.3);
   border-radius: 15px;
@@ -102,7 +102,7 @@ footer {
   width: 100%;
   bottom: 0;
   background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
-  border-top: 2px solid #000;
+  border-top: 2px solid #ccc;
   align-items: center;
 }
 
@@ -151,7 +151,7 @@ figcaption {
 }
 
 strong {
-  font-size: 18px;
+  font-size: 20px;
 }
 .profile-picture {
   display: flex;
