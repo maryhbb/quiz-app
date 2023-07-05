@@ -1,22 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Space+Mono:wght@400;700&display=swap");
 @import "./normalise.css";
 
 * {
   box-sizing: border-box;
 }
 
+:root {
+  --transparent-white: rgba(255, 255, 255, 0.3);
+}
+
 body {
   font-family: "Space Mono", monospace;
   max-width: 400px;
-  margin: auto auto;
+  margin: auto;
   background-color: #000;
+}
+
+header.header,
+main,
+footer {
+  background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
 }
 
 header.header {
   height: 100px;
+  font-family: "Aclonica", sans-serif;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   position: sticky;
   top: 0;
   display: flex;
@@ -24,14 +34,12 @@ header.header {
   align-items: center;
   border-bottom: 2px solid #ccc;
   z-index: 100;
-  background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
   min-height: calc(100vh - 100px - 62px);
 }
 
@@ -39,7 +47,7 @@ main {
   position: relative;
   padding: 25px;
   margin: 20px;
-  background-color: rgb(255, 255, 255, 0.3);
+  background-color: var(--transparent-white);
   border-radius: 15px;
   text-align: center;
   width: 90%;
@@ -55,7 +63,8 @@ main {
   margin: 0;
   padding: 5px;
   list-style: none;
-  background-color: rgb(255, 255, 255, 0.25);
+  /* background-color: rgb(255, 255, 255, 0.25); */
+  background-color: var(--transparent-white);
   border-radius: 5px;
 }
 
@@ -64,7 +73,7 @@ main {
   padding: 5px;
   width: 120px;
   border-radius: 5px;
-  background-color: rgb(255, 255, 255, 0.3);
+  background-color: var(--transparent-white);
   border-color: rgb(255, 255, 255, 0.6);
   cursor: pointer;
   font-family: inherit;
@@ -81,13 +90,13 @@ main {
 
 .bookmark {
   position: absolute;
+  top: -5px;
+  right: 10px;
+  height: 35px;
+  width: 35px;
   border: none;
   padding: 0;
   margin: 0;
-  height: 35px;
-  width: 35px;
-  right: 10px;
-  top: -5px;
   background-color: transparent;
   cursor: pointer;
   color: transparent;
@@ -101,7 +110,6 @@ footer {
   position: sticky;
   width: 100%;
   bottom: 0;
-  background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
   border-top: 2px solid #ccc;
   align-items: center;
 }
@@ -131,7 +139,7 @@ footer {
   height: 100%;
   padding: 20px;
   margin: 20px;
-  background-color: rgb(255, 255, 255, 0.3);
+  background-color: var(--transparent-white);
   border-radius: 15px;
   width: 90%;
   display: flex;
@@ -144,10 +152,6 @@ figure {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-}
-
-figcaption {
-  font-weight: bold;
 }
 
 strong {
