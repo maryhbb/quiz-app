@@ -17,7 +17,7 @@
     </header>
     <main>
       <section class="card">
-        <button class="bookmark bookmark-active">
+        <button class="bookmark bookmark-active" aria-label="Bookmark this question"> <!-- Added aria-label attribute -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -28,7 +28,8 @@
             height="35px"
             width="35px"
             fill="currentColor"
-          >
+            role="img" > <!-- Added role="img" for SVG accessibility -->
+          
             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
           </svg>
         </button>
@@ -43,7 +44,7 @@
       </section>
 
       <section class="card">
-        <button class="bookmark bookmark-active">
+        <button class="bookmark bookmark-active" aria-label="Bookmark this question"> <!-- Added aria-label attribute -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -54,7 +55,8 @@
             height="35px"
             width="35px"
             fill="currentColor"
-          >
+            role="img" > <!-- Added role="img" for SVG accessibility -->
+          
             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
           </svg>
         </button>
@@ -68,7 +70,7 @@
         </ul>
       </section>
       <section class="card">
-        <button class="bookmark bookmark-active">
+        <button class="bookmark bookmark-active" aria-label="Bookmark this question"> <!-- Added aria-label attribute -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -79,7 +81,8 @@
             height="35px"
             width="35px"
             fill="currentColor"
-          >
+            role="img" > <!-- Added role="img" for SVG accessibility -->
+          
             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
           </svg>
         </button>
@@ -101,7 +104,8 @@
             width="40"
             height="40"
             alt="home"
-          />
+            aria-label="Home"  /> <!-- Added aria-label attribute -->
+         
         </a>
         <a href="bookmarks"
           ><img
@@ -109,14 +113,16 @@
             alt="bookmark"
             width="40"
             height="40"
-        /></a>
+            aria-label="Bookmarks" /> <!-- Added aria-label attribute -->
+       </a>
         <a href="profile.html">
           <img
             src="./images/user-outlined.svg"
             alt="profile"
             width="40"
             height="40"
-        /></a>
+            aria-label="Profile"  /> <!-- Added aria-label attribute -->
+        </a>
       </nav>
     </footer>
   </body>

@@ -10,7 +10,7 @@
     <header class="header"><h1>Quiz App</h1></header>
     <main>
       <section class="card">
-        <button class="bookmark">
+        <button class="bookmark" aria-label="Bookmark this question"> <!-- Added aria-label attribute -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -21,7 +21,7 @@
             height="35px"
             width="35px"
             fill="currentColor"
-          >
+            role="img" >    <!-- Added role="img" for SVG accessibility -->
             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
           </svg>
         </button>
@@ -36,7 +36,7 @@
       </section>
 
       <section class="card">
-        <button class="bookmark bookmark-active">
+        <button class="bookmark bookmark-active" aria-label="Bookmark this question"> <!-- Added aria-label attribute -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -47,7 +47,8 @@
             height="35px"
             width="35px"
             fill="currentColor"
-          >
+            role="img" 
+            >    <!-- Added role="img" for SVG accessibility -->
             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
           </svg>
         </button>
@@ -61,7 +62,7 @@
         </ul>
       </section>
       <section class="card">
-        <button class="bookmark">
+        <button class="bookmark" aria-label="Bookmark this question"> <!-- Added aria-label attribute -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -72,7 +73,8 @@
             height="35px"
             width="35px"
             fill="currentColor"
-          >
+            role="img" 
+            >    <!-- Added role="img" for SVG accessibility -->
             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
           </svg>
         </button>
@@ -86,7 +88,7 @@
         </ul>
       </section>
       <section class="card">
-        <button class="bookmark">
+        <button class="bookmark" aria-label="Bookmark this question"> <!-- Added aria-label attribute -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -97,7 +99,8 @@
             height="35px"
             width="35px"
             fill="currentColor"
-          >
+            role="img" 
+            >    <!-- Added role="img" for SVG accessibility -->
             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
           </svg>
         </button>
@@ -113,27 +116,30 @@
     </main>
     <footer>
       <nav class="navigation">
-        <a href="#home">
+        <a href="#home"> <!--Added aria-label attribute-->
           <img
             src="./images/home-filled.svg"
             width="40"
             height="40"
             alt="home"
+            aria-label="Home" 
           />
         </a>
-        <a href="bookmarks.html"
-          ><img
+        <a href="bookmarks.html"> <!--Added aria-label attribute-->
+          <img
             src="./images/bookmark-outlined.svg"
             alt="bookmark"
             width="40"
             height="40"
+            aria-label="Bookmarks" 
         /></a>
-        <a href="profile.html">
+        <a href="profile.html"> <!--Added aria-label attribute-->
           <img
             src="./images/user-outlined.svg"
             alt="profile"
             width="40"
             height="40"
+            aria-label="Profile" 
         /></a>
       </nav>
     </footer>
