@@ -10,14 +10,15 @@
     <header class="header">
       <h1>
         Quiz App
-        <span style="font-size: 15px; display: flex; justify-content: center"
-          >Bookmarks</span
-        >
+        <span class="header__subtitle">Bookmarks</span>
       </h1>
     </header>
     <main>
       <section class="card">
-        <button class="bookmark bookmark-active" aria-label="Bookmark this question"> <!-- Added aria-label attribute -->
+        <button
+          class="card__bookmark card__bookmark--active"
+          aria-label="Bookmark this question"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -28,22 +29,27 @@
             height="35px"
             width="35px"
             fill="currentColor"
-            role="img" > <!-- Added role="img" for SVG accessibility -->
-          
+            role="img"
+          >
             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
           </svg>
         </button>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</p>
-        <button class="answer-button">Show answer</button>
-        <ul class="card-tag">
-          <li class="tag">#html</li>
-          <li class="tag">#css</li>
-          <li class="tag">#flexbox</li>
+        <p class="card__text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit?
+        </p>
+        <button class="card__button">Show answer</button>
+        <ul class="card__tags">
+          <li class="card__tag">#html</li>
+          <li class="card__tag">#css</li>
+          <li class="card__tag">#flexbox</li>
         </ul>
       </section>
 
       <section class="card">
-        <button class="bookmark bookmark-active" aria-label="Bookmark this question"> <!-- Added aria-label attribute -->
+        <button
+          class="card__bookmark card__bookmark--active"
+          aria-label="Bookmark this question"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -54,21 +60,26 @@
             height="35px"
             width="35px"
             fill="currentColor"
-            role="img" > <!-- Added role="img" for SVG accessibility -->
-          
+            role="img"
+          >
             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
           </svg>
         </button>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</p>
-        <button class="answer-button">Show answer</button>
-        <ul class="card-tag">
-          <li class="tag">#html</li>
-          <li class="tag">#css</li>
-          <li class="tag">#flexbox</li>
+        <p class="card__text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit?
+        </p>
+        <button class="card__button">Show answer</button>
+        <ul class="card__tags">
+          <li class="card__tag">#html</li>
+          <li class="card__tag">#css</li>
+          <li class="card__tag">#flexbox</li>
         </ul>
       </section>
       <section class="card">
-        <button class="bookmark bookmark-active" aria-label="Bookmark this question"> <!-- Added aria-label attribute -->
+        <button
+          class="card__bookmark card__bookmark--active"
+          aria-label="Bookmark this question"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -79,17 +90,19 @@
             height="35px"
             width="35px"
             fill="currentColor"
-            role="img" > <!-- Added role="img" for SVG accessibility -->
-          
+            role="img"
+          >
             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
           </svg>
         </button>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</p>
-        <button class="answer-button">Show answer</button>
-        <ul class="card-tag">
-          <li class="tag">#html</li>
-          <li class="tag">#css</li>
-          <li class="tag">#flexbox</li>
+        <p class="card__text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit?
+        </p>
+        <button class="card__button">Show answer</button>
+        <ul class="card__tags">
+          <li class="card__tag">#html</li>
+          <li class="card__tag">#css</li>
+          <li class="card__tag">#flexbox</li>
         </ul>
       </section>
     </main>
@@ -101,8 +114,8 @@
             width="40"
             height="40"
             alt="home"
-            aria-label="Home"  /> <!-- Added aria-label attribute -->
-         
+            aria-label="Home"
+          />
         </a>
         <a href="bookmarks"
           ><img
@@ -110,15 +123,17 @@
             alt="bookmark"
             width="40"
             height="40"
-            aria-label="Bookmarks" /> <!-- Added aria-label attribute -->
-       </a>
+            aria-label="Bookmarks"
+          />
+        </a>
         <a href="profile.html">
           <img
             src="./images/user-outlined.svg"
             alt="profile"
             width="40"
             height="40"
-            aria-label="Profile"  /> <!-- Added aria-label attribute -->
+            aria-label="Profile"
+          />
         </a>
       </nav>
     </footer>
