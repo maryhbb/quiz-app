@@ -7,9 +7,19 @@
 
 :root {
   --transparent-white: rgba(255, 255, 255, 0.3);
+  --gradient-start: lightblue;
+  --gradient-mid: lightpink;
+  --gradient-end: lightblue;
+  --card-background: var(--transparent-white);
+  --button-background: var(--transparent-white);
+  --button-border-color: rgba(255, 255, 255, 0.6);
+  --bookmark-color: transparent;
+  --footer-border-color: #ccc;
+  --navigation-hover-color: rgba(255, 255, 255, 0.5);
 }
 
 body {
+  --card-margin: 10px; 
   font-family: "Space Mono", monospace;
   max-width: 400px;
   margin: auto;
@@ -19,7 +29,12 @@ body {
 header.header,
 main,
 footer {
-  background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
+  background: linear-gradient(
+    to left bottom,
+    var(--gradient-start),
+    var(--gradient-mid),
+    var(--gradient-end)
+  );
 }
 
 header.header {
@@ -46,8 +61,8 @@ main {
 .card {
   position: relative;
   padding: 25px;
-  margin: 20px;
-  background-color: var(--transparent-white);
+  margin: var(--card-margin); 
+  background-color: var(--card-background);
   border-radius: 15px;
   text-align: center;
   width: 90%;
@@ -63,8 +78,7 @@ main {
   margin: 0;
   padding: 5px;
   list-style: none;
-  /* background-color: rgb(255, 255, 255, 0.25); */
-  background-color: var(--transparent-white);
+  background-color: var(--card-background);
   border-radius: 5px;
 }
 
@@ -73,15 +87,15 @@ main {
   padding: 5px;
   width: 120px;
   border-radius: 5px;
-  background-color: var(--transparent-white);
-  border-color: rgb(255, 255, 255, 0.6);
+  background-color: var(--button-background);
+  border-color: var(--button-border-color);
   cursor: pointer;
   font-family: inherit;
   font-weight: bold;
 }
 
 .answer-button:hover {
-  background-color: rgb(255, 255, 255, 0.5);
+  background-color: var(--navigation-hover-color);
   box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
     0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
   transition: all 0.2s;
@@ -97,7 +111,7 @@ main {
   border: none;
   padding: 0;
   margin: 0;
-  background-color: transparent;
+  background-color: var(--bookmark-color);
   cursor: pointer;
   color: transparent;
 }
@@ -110,7 +124,7 @@ footer {
   position: sticky;
   width: 100%;
   bottom: 0;
-  border-top: 2px solid #ccc;
+  border-top: 2px solid var(--footer-border-color);
   align-items: center;
 }
 
@@ -131,15 +145,15 @@ footer {
 }
 
 .navigation a:hover {
-  background-color: rgb(255, 255, 255, 0.5);
-  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.3);
+  background-color: var(--navigation-hover-color);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .profile-card {
   height: 100%;
   padding: 20px;
   margin: 20px;
-  background-color: var(--transparent-white);
+  background-color: var(--card-background);
   border-radius: 15px;
   width: 90%;
   display: flex;
@@ -157,6 +171,7 @@ figure {
 strong {
   font-size: 20px;
 }
+
 .profile-picture {
   display: flex;
   border-radius: 50px;
