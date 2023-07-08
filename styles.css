@@ -19,14 +19,14 @@
 }
 
 body {
-  --card-margin: 10px; 
+  --card-margin: 10px;
   font-family: "Space Mono", monospace;
   max-width: 400px;
   margin: auto;
   background-color: #000;
 }
 
-header.header,
+.header,
 main,
 footer {
   background: linear-gradient(
@@ -37,7 +37,7 @@ footer {
   );
 }
 
-header.header {
+.header {
   height: 100px;
   font-family: "Aclonica", sans-serif;
   text-transform: uppercase;
@@ -51,6 +51,11 @@ header.header {
   z-index: 100;
 }
 
+.header__subtitle {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
 main {
   display: flex;
   flex-direction: column;
@@ -61,20 +66,20 @@ main {
 .card {
   position: relative;
   padding: 25px;
-  margin: var(--card-margin); 
+  margin: var(--card-margin);
   background-color: var(--card-background);
   border-radius: 15px;
   text-align: center;
   width: 90%;
 }
 
-.card-tag {
+.card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
 }
 
-.tag {
+.card__tag {
   margin: 0;
   padding: 5px;
   list-style: none;
@@ -82,7 +87,8 @@ main {
   border-radius: 5px;
 }
 
-.answer-button {
+.card__button,
+.profile-card__button {
   margin: 15px;
   padding: 5px;
   width: 120px;
@@ -94,7 +100,7 @@ main {
   font-weight: bold;
 }
 
-.answer-button:hover {
+.card__button:hover {
   background-color: var(--navigation-hover-color);
   box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
     0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
@@ -102,7 +108,7 @@ main {
   border-color: transparent;
 }
 
-.bookmark {
+.card__bookmark {
   position: absolute;
   top: -5px;
   right: 10px;
@@ -116,7 +122,7 @@ main {
   color: transparent;
 }
 
-.bookmark-active {
+.card__bookmark--active {
   color: #000;
 }
 
@@ -168,21 +174,17 @@ figure {
   gap: 10px;
 }
 
-strong {
-  font-size: 20px;
-}
-
-.profile-picture {
+.profile-card__picture {
   display: flex;
   border-radius: 50px;
 }
 
-.profile-card button {
+.profile-card__button {
   margin: 0;
   align-self: center;
 }
 
-.mode-toggle {
+.profile-card__mode-toggle {
   width: 35px;
   height: 35px;
   cursor: pointer;
@@ -190,15 +192,14 @@ strong {
   border-color: transparent;
 }
 
-.counter {
+.profile-card__counter {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
 
-.my-questions,
-.my-bookmarks {
+.profile-card__count {
   border: 2px solid;
   padding: 5px;
   margin: 10px;
@@ -209,13 +210,12 @@ strong {
   justify-content: space-around;
 }
 
-.my-questions-count,
-.my-bookmarks-count {
+.profile-card__count-text {
   font-size: 15px;
   font-weight: bold;
 }
 
-.section-title {
+.profile-card__section-title {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -224,7 +224,24 @@ strong {
   padding-bottom: 5px;
 }
 
-.dark-mode {
+.profile-card__section-title-text {
+  font-size: 20px;
+}
+
+.profile-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.profile-card__tag {
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+  background-color: var(--card-background);
+  border-radius: 5px;
+}
+.profile-card__dark-mode {
   display: flex;
   align-items: center;
   justify-content: space-between;
