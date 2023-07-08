@@ -20,6 +20,7 @@
   list-style: none;
   background-color: var(--card-background);
   border-radius: 5px;
+  font-size: small;
 }
 
 .card__button {

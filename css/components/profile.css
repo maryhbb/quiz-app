@@ -50,7 +50,7 @@ figure {
 }
 
 .profile-card__count {
-  border: 2px solid;
+  background-color: var(--card-background);
   padding: 5px;
   margin: 10px;
   border-radius: 5px;
@@ -90,6 +90,7 @@ figure {
   list-style: none;
   background-color: var(--card-background);
   border-radius: 5px;
+  font-size: small;
 }
 .profile-card__dark-mode {
   display: flex;
