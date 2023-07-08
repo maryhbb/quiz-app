@@ -1,0 +1,28 @@
+footer {
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  border-top: 2px solid var(--footer-border-color);
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.navigation a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+.navigation a:hover {
+  background-color: var(--navigation-hover-color);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}

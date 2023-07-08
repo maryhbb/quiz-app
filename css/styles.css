@@ -1,0 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Poppins:ital,wght@1,800&display=swap");
+@import "./global.css";
+@import "./components/card.css";
+@import "./components/header.css";
+@import "./components/footer.css";
+@import "./components/profile.css";

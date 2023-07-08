@@ -1,0 +1,61 @@
+.card {
+  position: relative;
+  padding: 25px;
+  margin: var(--card-margin);
+  background-color: var(--card-background);
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+}
+
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.card__tag {
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+  background-color: var(--card-background);
+  border-radius: 5px;
+}
+
+.card__button {
+  margin: 15px;
+  padding: 5px;
+  width: 120px;
+  border-radius: 5px;
+  background-color: var(--button-background);
+  border-color: var(--button-border-color);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.card__button:hover {
+  background-color: var(--navigation-hover-color);
+  box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
+    0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+  transition: all 0.2s;
+  border-color: transparent;
+}
+
+.card__bookmark {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  height: 35px;
+  width: 35px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--bookmark-color);
+  cursor: pointer;
+  color: transparent;
+}
+
+.card__bookmark--active {
+  color: #000;
+}
