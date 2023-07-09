@@ -1,6 +1,6 @@
 .header {
   height: 100px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-size: 18px;
   position: sticky;
@@ -8,7 +8,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #ccc;
   z-index: 100;
 }
 
@@ -16,4 +15,5 @@
   font-size: 15px;
   display: flex;
   justify-content: center;
+  height: 25px;
 }
