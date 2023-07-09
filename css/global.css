@@ -2,42 +2,25 @@
   box-sizing: border-box;
 }
 
-:root {
-  --transparent-white: rgba(255, 255, 255, 0.3);
-  --gradient-start: lightblue;
-  --gradient-mid: lightpink;
-  --gradient-end: lightblue;
-  --card-background: var(--transparent-white);
-  --button-background: var(--transparent-white);
-  --button-border-color: rgba(255, 255, 255, 0.6);
-  --bookmark-color: transparent;
-  --footer-border-color: #ccc;
-  --navigation-hover-color: rgba(255, 255, 255, 0.5);
-}
-
 body {
   --card-margin: 10px;
-  font-family: 'Noto Sans SC', sans-serif;
+  font-family: "Noto Sans SC", sans-serif;
   max-width: 400px;
   margin: auto;
-  background-color: #000;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 header,
-main,
 footer {
-  background: linear-gradient(
-    to left bottom,
-    var(--gradient-start),
-    var(--gradient-mid),
-    var(--gradient-end)
-  );
+  background: var(--header-footer-bg);
 }
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: calc(100vh - 100px - 62px);
+  min-height: calc(100vh - 100px - 60px);
+  background: var(--main-bg);
 }
 
 h1,
@@ -55,8 +38,13 @@ ul {
 
 button {
   color: inherit;
+  border-color: inherit;
 }
 
 figure {
   margin: 0;
+}
+
+a {
+  color: inherit;
 }
