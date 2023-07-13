@@ -1,12 +1,17 @@
-const modeToggle = document.querySelector(".profile-card__mode-toggle");
-if (modeToggle) {
-  modeToggle.onclick = () => {
-    const theme = getTheme();
-    const updatedTheme = theme === "dark" ? "light" : "dark";
-    localStorage.setItem("theme", updatedTheme);
+// Dark moode with localStorage
 
-    updateStyle(updatedTheme);
-  };
+export function registerThemeToggle() {
+  const modeToggle = document.querySelector(".profile-card__mode-toggle");
+  if (modeToggle) {
+    modeToggle.onclick = () => {
+      const theme = getTheme();
+      const updatedTheme = theme === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", updatedTheme);
+
+      updateStyle(updatedTheme);
+    };
+  }
+  updateStyle(getTheme());
 }
 
 function getTheme() {
@@ -51,7 +56,6 @@ function updateStyle(theme) {
     );
     rootStyle.setProperty("--dark-mode-color", "#11152b");
     rootStyle.setProperty("--dark-mode-accent-color", "#6aa9e126");
-
     rootStyle.setProperty("--card-background", "var(--dark-mode-accent-color)");
     rootStyle.setProperty(
       "--button-background",
@@ -67,5 +71,3 @@ function updateStyle(theme) {
     rootStyle.setProperty("--bg-color", "#ccc");
   }
 }
-
-updateStyle(getTheme());
