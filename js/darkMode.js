@@ -11,7 +11,6 @@ export function registerThemeToggle() {
       updateStyle(updatedTheme);
     };
   }
-  updateStyle(getTheme());
 }
 
 function getTheme() {
@@ -70,4 +69,8 @@ function updateStyle(theme) {
     rootStyle.setProperty("--text-color", "#fff");
     rootStyle.setProperty("--bg-color", "#ccc");
   }
+}
+
+export function applyTheme() {
+  updateStyle(getTheme());
 }
