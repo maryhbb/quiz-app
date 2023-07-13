@@ -1,13 +1,31 @@
-.card {
+.card__container {
   position: relative;
+  height: 250px;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+/* front of Card*/
+.card {
+  position: absolute;
   padding: 25px;
   margin: var(--card-margin);
   background-color: var(--card-background);
   border-radius: 15px;
   text-align: center;
-  width: 90%;
+  backface-visibility: hidden;
+  inset: 0;
 }
 
+/* back of Card */
+.card__answer--back {
+  transform: rotateY(180deg);
+}
+
+.flipped.card__container {
+  transform: rotateY(180deg);
+}
 .card__tags {
   display: flex;
   flex-wrap: wrap;
@@ -35,7 +53,6 @@
   font-weight: bold;
 }
 
-
 .card__button:hover {
   background-color: var(--navigation-hover-color);
   box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
@@ -55,7 +72,6 @@
   margin: 0;
   background-color: var(--bookmark-color);
   cursor: pointer;
-  /* color: transparent; */
 }
 
 .card__bookmark svg {
