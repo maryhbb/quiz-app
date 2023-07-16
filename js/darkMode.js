@@ -2,15 +2,14 @@
 
 export function registerThemeToggle() {
   const modeToggle = document.querySelector(".profile-card__mode-toggle");
-  if (modeToggle) {
-    modeToggle.onclick = () => {
-      const theme = getTheme();
-      const updatedTheme = theme === "dark" ? "light" : "dark";
-      localStorage.setItem("theme", updatedTheme);
 
-      updateStyle(updatedTheme);
-    };
-  }
+  modeToggle.onclick = () => {
+    const theme = getTheme();
+    const updatedTheme = theme === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", updatedTheme);
+
+    updateStyle(updatedTheme);
+  };
 }
 
 function getTheme() {
