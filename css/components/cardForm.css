@@ -1,0 +1,23 @@
+.card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 30px 15px 0 15px;
+}
+
+.card__form textarea,
+.card__form input {
+  width: 100%;
+  background: rgb(255, 255, 255, 0.5);
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+}
+
+.card__form input {
+  min-height: 30px;
+}
+
+.add__button {
+  text-align: center;
+}
