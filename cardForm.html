@@ -16,17 +16,36 @@
     <main>
       <form action="" class="card__form">
         <div>
-          <label for="question">Question:</label>
-          <textarea
-            name="question"
-            id="question"
-            cols="30"
-            rows="10"
-          ></textarea>
+          <label for="question" class="form__label"
+            >Question:
+            <textarea
+              name="question"
+              id="question"
+              cols="30"
+              rows="10"
+              data-js="textarea"
+              required
+            ></textarea>
+            <output class="form__output" data-js="output-characters"
+              >300 characters remaining
+            </output>
+          </label>
         </div>
         <div>
-          <label for="answer">Answer:</label>
-          <textarea name="answer" id="answer" cols="30" rows="10"></textarea>
+          <label for="answer" class="form__label"
+            >Answer:
+            <textarea
+              name="answer"
+              id="answer"
+              cols="30"
+              rows="10"
+              data-js="textarea"
+              required
+            ></textarea>
+            <output class="form__output" data-js="output-characters"
+              >300 characters remaining
+            </output>
+          </label>
         </div>
         <div>
           <label for="tags">Tags:</label>
