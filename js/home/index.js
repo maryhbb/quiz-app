@@ -10,3 +10,19 @@ function renderCard() {
 }
 
 renderCard();
+
+// for (let node of document.querySelectorAll(".card__bookmark")) {
+//   console.log(node);
+//   node.onclick = (event) => event.currentTarget.classList.toggle("card__bookmark--active");
+// }
+
+
+const cardBookmarks = document.querySelectorAll(".card__bookmark");
+
+function toggleBookmark(event) {
+  event.currentTarget.classList.toggle("card__bookmark--active");
+}
+
+for (let i = 0; i < cardBookmarks.length; i++) {
+  cardBookmarks[i].addEventListener("click", toggleBookmark);
+}
