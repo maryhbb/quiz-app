@@ -8,10 +8,12 @@
 .card__form textarea,
 .card__form input {
   width: 100%;
-  background: rgb(255, 255, 255, 0.5);
+  background: var(--card-background);
+  color: var(--text-color);
   border-radius: 8px;
   border: none;
   margin-top: 10px;
+  padding: .75em;
 }
 
 .card__form input {
@@ -20,4 +22,11 @@
 
 .add__button {
   text-align: center;
+}
+
+.form__output {
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  color: grey;
 }

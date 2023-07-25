@@ -48,3 +48,8 @@ figure {
 a {
   color: inherit;
 }
+
+textarea,
+input {
+  outline: none;
+}
