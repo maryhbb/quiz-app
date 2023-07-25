@@ -15,20 +15,25 @@
     </header>
     <main>
       <form action="" class="card__form">
-        <div >
-          <label for="">Question:</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div>
+          <label for="question">Question:</label>
+          <textarea
+            name="question"
+            id="question"
+            cols="30"
+            rows="10"
+          ></textarea>
         </div>
         <div>
-          <label for="">Answer:</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <label for="answer">Answer:</label>
+          <textarea name="answer" id="answer" cols="30" rows="10"></textarea>
         </div>
         <div>
-          <label for="">Tags:</label>
-          <input type="text" />
+          <label for="tags">Tags:</label>
+          <input type="text" name="tags" id="tags" />
         </div>
         <div class="add__button">
-          <button class="card__button">Add</button>
+          <button type="submit" class="card__button">Add</button>
         </div>
       </form>
     </main>
@@ -98,5 +103,6 @@
       </nav>
     </footer>
     <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/addCardForm/index.js"></script>
   </body>
 </html>
