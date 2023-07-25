@@ -1,7 +1,8 @@
 import { appendCard } from "../card/index.js";
-import { cards } from "../card/data.js";
+// import { cards } from "../card/data.js";
 import { flipCard } from "../flipCard.js";
 
+const cards = JSON.parse(localStorage.getItem("cards")) ?? [];
 function renderCard() {
   const container = document.querySelector("main");
   container.innerHTML = "";
