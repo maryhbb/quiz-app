@@ -25,3 +25,28 @@ form.onsubmit = (event) => {
 
   form.reset();
 };
+
+//character limit functionality
+const textareas = document.querySelectorAll('[data-js="textarea"]');
+const outputCharacters = document.querySelectorAll(
+  '[data-js="output-characters"]'
+);
+
+// Loop through each textarea element
+textareas.forEach((textarea, index) => {
+  textarea.addEventListener("input", () => {
+    // Calculate the number of remaining characters allowed (limit of 30 characters for testing during development)
+    const remainingChars = 30 - textarea.value.length;
+
+    if (remainingChars >= 0) {
+      outputCharacters[index].textContent =
+        remainingChars + " characters remaining";
+    } else {
+      outputCharacters[index].textContent =
+        "Not possible to write, character limit exceeded";
+
+      // Trim the textarea value to the character limit (30 characters)
+      textarea.value = textarea.value.slice(0, 30);
+    }
+  });
+});
