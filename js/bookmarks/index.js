@@ -1,10 +1,9 @@
-import { appendCard } from "../card/index.js";
-import { cards } from "../card/data.js";
+import { appendCard, getAllCards } from "../card/index.js";
 import { flipCard } from "../flipCard.js";
 
 const container = document.querySelector("main");
 
-cards
+getAllCards()
   .filter((card) => card.bookmarked)
   .forEach((card) => appendCard(card, container));
 flipCard();

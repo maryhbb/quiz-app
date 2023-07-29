@@ -1,8 +1,7 @@
-import { appendCard } from "../card/index.js";
-// import { cards } from "../card/data.js";
+import { appendCard, getAllCards } from "../card/index.js";
 import { flipCard } from "../flipCard.js";
 
-const cards = JSON.parse(localStorage.getItem("cards")) ?? [];
+const cards = getAllCards();
 function renderCard() {
   const container = document.querySelector("main");
   container.innerHTML = "";
@@ -12,18 +11,11 @@ function renderCard() {
 
 renderCard();
 
-// for (let node of document.querySelectorAll(".card__bookmark")) {
-//   console.log(node);
-//   node.onclick = (event) => event.currentTarget.classList.toggle("card__bookmark--active");
-// }
-
-
-const cardBookmarks = document.querySelectorAll(".card__bookmark");
-
 function toggleBookmark(event) {
   event.currentTarget.classList.toggle("card__bookmark--active");
 }
 
-for (let i = 0; i < cardBookmarks.length; i++) {
-  cardBookmarks[i].addEventListener("click", toggleBookmark);
+const cardBookmarks = document.querySelectorAll(".card__bookmark");
+for (const cardBookmark of cardBookmarks) {
+  cardBookmark.onclick = toggleBookmark;
 }

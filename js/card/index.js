@@ -42,3 +42,8 @@ export function appendCard(card, container) {
 
   container.appendChild(cardElement);
 }
+
+export function getAllCards() {
+  return JSON.parse(localStorage.getItem("cards")) ?? [];
+}
+
