@@ -47,3 +47,6 @@ export function getAllCards() {
   return JSON.parse(localStorage.getItem("cards")) ?? [];
 }
 
+export function setAllCards(cards) {
+  localStorage.setItem("cards", JSON.stringify(cards));
+}
