@@ -18,6 +18,11 @@
   inset: 0;
 }
 
+.card__text {
+  word-wrap: break-word;
+}
+
+
 /* back of Card */
 .card__answer--back {
   transform: rotateY(180deg);
