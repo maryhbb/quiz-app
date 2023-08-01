@@ -50,3 +50,37 @@ export function getAllCards() {
 export function setAllCards(cards) {
   localStorage.setItem("cards", JSON.stringify(cards));
 }
+
+/**
+ * Handles bookmark toggle functionality for a card.
+ *
+ * @param {Event} event - The event object triggered by the bookmark toggle.
+ * @param {boolean} removeCard - A flag indicating whether to remove the card container from the DOM after the bookmark toggle.
+ */
+export function handleBookmarkToggle(event, removeCard) {
+  const toggleBtn = event.currentTarget;
+
+  // Find the button element and its closest card container
+  toggleBtn.classList.toggle("card__bookmark--active");
+  const cardContainerElement = toggleBtn.closest("[data-card-id]");
+
+  // Get the card ID
+  const cardId = cardContainerElement.getAttribute("data-card-id");
+
+  // Find and update the corresponding card from localStorage
+  const allCards = getAllCards();
+  const updatedCards = allCards.map((card) => {
+    if (card.id === cardId) {
+      card.bookmarked = !card.bookmarked;
+    }
+    return card;
+  });
+
+  // Save the updated cards to localStorage
+  setAllCards(updatedCards);
+
+  // If removeCard is true, remove the card container element from the DOM
+  if (removeCard) {
+    cardContainerElement.remove();
+  }
+}
