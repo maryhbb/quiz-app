@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "https://jspm.dev/uuid";
+
 const form = document.querySelector("form");
 
 form.onsubmit = (event) => {
@@ -7,7 +9,7 @@ form.onsubmit = (event) => {
 
   const formData = new FormData(form);
   const cardData = {
-    id: 666,
+    id: uuidv4(),
     ...Object.fromEntries(formData),
     bookmarked: false,
   };
